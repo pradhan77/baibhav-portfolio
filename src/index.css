@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --default-font: 'Roboto', system-ui, -apple-system, sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+  --nav-font: 'Poppins', sans-serif;
+  
+  --background-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #173b6c;
+  --accent-color: #149ddd;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  font-family: var(--default-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #149ddd;
+}
+
+/* =====================================================================
+   iPortfolio Signature Classes & Design Elements
+   ===================================================================== */
+
+/* Section Title with signature accent bar */
+.section-title {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title p {
+  color: #45505b;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Alternating section background */
+.light-background {
+  background-color: #f4fafd;
+}
+
+/* Resume Item Timeline */
+.resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #149ddd;
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #ffffff;
+  border: 2px solid #149ddd;
+}
+
+/* Progress bar container and animation */
+.progress-bar-wrap {
+  background: #e2e8f0;
+  height: 10px;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #149ddd;
+  transition: width 1s ease-in-out;
+}
+
+/* Soft card shadow */
+.iportfolio-card {
+  background: #ffffff;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.iportfolio-card:hover {
+  box-shadow: 0px 8px 30px rgba(20, 157, 221, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Typed cursor blink */
+@keyframes typedCursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typed-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: typedCursorBlink 0.8s infinite;
+  color: #149ddd;
+}
